@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="rando()">Roll to Hit</button>
+
+<p id="demo">0</p>
+
+<script>
+
+function rando () {
+var roll = (function () {
+return Math.floor(Math.random()*(21-1))+1;})();
+var text = "";
+if (roll > 10) {document.getElementById("demo").innerHTML = text += roll + "</br>" + "Hit"}
+else {document.getElementById("demo").innerHTML= text += roll + "</br>" + "Miss"};
+};
+
+
+</script>
+
+</body>
+</html>
+
+
