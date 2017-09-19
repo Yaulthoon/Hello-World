@@ -1,0 +1,54 @@
+<!DOCTYPE = HTML>
+
+<head>
+<style>
+#container {
+position: relative;
+height: 350px;
+width: 350px;
+background-color:  #e8f6f3;
+}
+
+#movingObject {
+position: absolute;
+height: 25px;
+width: 25px;
+background-color: #FF5733;
+transition-duration: 0.5s;
+}
+
+</style>
+</head>
+
+<html>
+
+<body>
+
+<button onclick="start()">Click to run</button>
+<div id = "container">
+<div id = "movingObject">
+</div>
+</div>
+
+<script>
+function start () {
+setInterval (movement, 500);
+function movement () {
+var coloring1 = Math.floor(Math.random() * 255 + 1);
+var coloring2 = Math.floor(Math.random() * 255 + 1);
+var coloring3 = Math.floor(Math.random() * 255 + 1);
+var moving1 = Math.floor(Math.random() * 325 + 1);
+var moving2 = Math.floor(Math.random() * 325 + 1);
+var elem = document.getElementById("movingObject");
+var elem1 = document.getElementById("container");
+elem.style.top = moving1 + 'px';
+elem.style.left = moving2 + 'px';
+elem.style.backgroundColor = 'rgb(' + coloring1 + ',' + coloring2 + ',' + coloring3 + ')';
+console.log(elem.style.backgroundColor);
+}
+}
+
+</script>
+</body>
+
+</html>
