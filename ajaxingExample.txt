@@ -1,1 +1,0 @@
-Lets test a small exercise using AJAX.
